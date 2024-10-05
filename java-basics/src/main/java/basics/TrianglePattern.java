@@ -1,27 +1,22 @@
 package basics;
 
 public class TrianglePattern {
-
     public static String getTriangleString(int rows) {
-        StringBuilder result = new StringBuilder();
-        int count = 0;
+        String result = "";
+        int counter = 1;
 
-        for(int i = 1; i <= rows; i++) {
-            for(int j = 1; j <= i; j++) {
-                count++;
-                result.append(count).append(" ");
+        for(int i=1; i<=rows; i++) {
+            for(int j=1; j<=i; j++) {
+                result += counter + " ";
+                counter++;
             }
-            result.append("\n");
+            result += "\n";
         }
-        
-        return result.toString();
-    }
 
+        return result;
+    }
     
     public static void main(String[] args) {
         System.out.println(getTriangleString(7));
     }
-
-
-
 }
